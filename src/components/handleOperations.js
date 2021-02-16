@@ -1,46 +1,45 @@
+import React, {Component} from "react";
+import Calculator from '../containers/Calculator';
 
-// function handleOperations(){
-//     const input = [];
+export default class HandleOperations extends Component{   
+    render(props){
+        switch (props.input) {
+          case 'C':
+            this.setState={ display: "" };
+                
+          case 'A/C':
+            this.setState={ 
+              input: [],
+              display: "",
+              operation: "", 
+            };
+            break;
+          
+            case '%':
+                break;
     
-//     switch (input) {
-//       case 'C':
-//         this.setState={ display: "" };
-            
-//       case 'A/C':
-//         this.setState={ 
-//           input: [],
-//           display: "",
-//           operation: "", 
-//         };
-//         break;
-      
-//         case '%':
-//           break;
-
-//         case '/':
-          
-          
-//         case 'x':
-         
-          
-//         case '-':
-         
-          
-//         case '+':
-          
-          
-//         case '.':
-//           this.setState={display: " " + "."}
-          
-//         case '=':
-          
-//           break;
-//       default:
-//         break;
-//     }
-
-//     return null;
-
-//   }
-
-// export default handleOperations;
+            case '/':
+                break;
+              
+            case 'x':
+                break;
+              
+            case '-':
+                break;
+              
+            case '+':
+                break;
+              
+            case '.':
+            //   this.setState={display: " " + "."}
+                break;
+    
+            case '=':
+              
+                break;
+          default:
+            break;
+        }
+            return;
+        }
+    }
