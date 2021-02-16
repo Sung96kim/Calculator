@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import Keypad from "../components/keypad";
-import handleOperations from '../components/handleOperations';
 import '../components/blinker';
 import './Calculator.css';
 
@@ -12,7 +11,6 @@ class Calculator extends Component{
     this.state={
       input: [],
       display: "",
-      operation: "",
       result: ""
     };
 
@@ -20,9 +18,22 @@ class Calculator extends Component{
   }
   //Computations
 
-  handleOnClick = (input) => {
-   
+  handleOnClick = () => {
+    this.setState=({
+      display: ""
+    })
   }
+
+  clear = () => {
+    this.setState=({
+      result: ""
+    })
+  }
+
+  backspace = () => {
+    
+  }
+
 
 
   
